@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html {
+  background: #0e0e11;
+  color: white;
+}
+
+body {
+  font-family: system-ui, "Inter", sans-serif;
+}
+
+.hero {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+/* ================= Experience section ================= */
+.experience {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 1rem;
+}
+
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.experience-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.experience-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.95rem;
+  opacity: 0.7;
+}
+
+.role {
+  font-weight: 500;
+  opacity: 1;
+}
+
+.experience-description {
+  max-width: 700px;
+  font-size: 1rem;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* ================= Projects section =================*/
+.projects {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 1rem;
+}
+
+.projects-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.project-item {
+  max-width: 800px;
+}
+
+.project-title {
+  font-size: 1.3rem;
+  font-weight: 500;
+  margin-bottom: 0.8rem;
+}
+
+.project-description {
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.85;
+  margin-bottom: 1.2rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.project-tags span {
+  font-size: 0.8rem;
+  padding: 0.3rem 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  opacity: 0.7;
+}
+
+/* ================= Scroll animations ================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ================= COntact ================= */
+.contact {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 6rem 1rem;
+}
+
+.contact-text {
+  margin-bottom: 1.2rem;
+  opacity: 0.8;
+}
+
+.contact-link {
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: white;
+  border-bottom: 1px solid rgba(255,255,255,0.3);
+}

@@ -1,0 +1,23 @@
+---
+import { experience } from "../data/experience.js";
+---
+
+<section id="work" class="experience reveal">
+  <h2 class="section-title">Experience</h2>
+
+  <div class="experience-list">
+    {experience.map((item) => (
+      <article class="experience-item">
+        <div class="experience-meta">
+          <span class="role">{item.role}</span>
+          <span class="company">{item.company}</span>
+          <span class="period">{item.period}</span>
+        </div>
+
+        <p class="experience-description">
+          {item.description}
+        </p>
+      </article>
+    ))}
+  </div>
+</section>
