@@ -1,4 +1,43 @@
-<section class="hero">
-  <h1>Quem eu sou</h1>
-  <p>Esta seção serve para me apresenentar </p>
+---
+// Você pode passar props se quiser personalizar
+const { name = "Bruno Farias", role = "Customer-Centric Traceability & Cloud Systems Consultant," } = Astro.props;
+---
+
+<section id="about" class="hero">
+  <div class="container">
+    <span class="hero-intro mono"></span>
+    
+    <h1 class="hero-title">{name}</h1>
+    
+    <p class="hero-subtitle">
+      {role} <br />Keeping mission-critical systems running under pressure
+    </p>
+    
+    <div class="hero-cta">
+      <a href="#projects" class="btn btn-primary">
+        Projecs
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 10h10M10 5l5 5-5 5"/>
+        </svg>
+      </a>
+      <a href="#contact" class="btn btn-secondary">
+        Contact
+      </a>
+    </div>
+    
+    <div class="hero-stats">
+      <div class="stat-item">
+        <span class="stat-number">10+</span>
+        <span class="stat-label">Years of Experience with Customer Success</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">7+</span>
+        <span class="stat-label">Years of Experience with Cloud Solutions</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-number">10+</span>
+        <span class="stat-label">Different Industry Sectors</span>
+      </div>
+    </div>
+  </div>
 </section>

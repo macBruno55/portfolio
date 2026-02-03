@@ -2,17 +2,24 @@
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Navbar from "../components/Navbar.astro";
 import Hero from "../components/Hero.astro";
-import Experience from "../components/Experience.astro";
+import ClientsCarousel from "../components/ClientsCarousel.astro";
+import ExperienceTimeline from "../components/ExperienceTimeline.astro"; // ← NOVO!
 import Projects from "../components/Projects.astro";
+import Contact from "../components/Contact.astro";
 import Footer from "../components/Footer.astro";
+import { clientLogos } from "../data/clientLogos.js";
 ---
 
-<BaseLayout title="Bruno Maciel · Portfolio">
+<BaseLayout title="Bruno Farias · Customer-Centric Traceability & Cloud Systems Consultant">
   <Navbar />
   <main>
-    <Hero />
-    <Experience />
-	<Projects />
+    <Hero 
+      name="Bruno Farias" 
+      role="CI consider myself a qualified professional who consistently exceeds expectations, not only because of technical capability, but mainly due to the way I approach responsibilities and challenges. I have a naturally collaborative profile, with a strong sense of commitment, clear communication, and a strong focus on results. Throughout my journey, I have learned that consistent results arise when people work in alignment, with well-defined goals and mutual trust. For this reason, I constantly seek to understand the business context, support colleagues and customers closely, and use technology as a means to generate real, sustainable, and measurable impact." />
+    <!-- Adicione o carrossel de clientes aqui -->
+    <ExperienceTimeline />
+    <Projects />
+    <Contact email="bruno@example.com" />
   </main>
   <Footer />
 </BaseLayout>

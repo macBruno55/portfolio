@@ -1,0 +1,192 @@
+---
+// Importar diretamente os logos
+import { clientLogos } from "../data/clientLogos.js";
+---
+
+<section class="clients-carousel reveal">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag mono">// Customer and Partners</span>
+      <h2 class="section-title">Companies I've Worked With  </h2>
+      <p class="section-description">
+          My client portfolio includes companies such as
+      </p>
+    </div>
+
+    <div class="carousel-wrapper">
+      <div class="carousel-track">
+        {clientLogos.map((logo) => (
+          <div class="logo-item">
+            <img 
+              src={logo.src} 
+              alt={logo.name}
+              title={logo.name}
+              loading="lazy"
+            />
+          </div>
+        ))}
+        <!-- Duplicar os logos para efeito infinito -->
+        {clientLogos.map((logo) => (
+          <div class="logo-item">
+            <img 
+              src={logo.src} 
+              alt={logo.name}
+              title={logo.name}
+              loading="lazy"
+            />
+          </div>
+        ))}
+      </div>
+    </div>
+    
+    <p class="clients-count">
+      <strong>{clientLogos.length}</strong> My client portfolio includes companies such as
+    </p>
+  </div>
+</section>
+
+<style>
+  .clients-carousel {
+    padding: var(--section-padding) 0;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  .carousel-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    margin: 3rem 0;
+    padding: 2rem 0;
+    
+    /* Gradient masks nas bordas */
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+  }
+
+  .carousel-track {
+    display: flex;
+    gap: 4rem;
+    animation: scroll 40s linear infinite;
+    width: fit-content;
+  }
+
+  .carousel-track:hover {
+    animation-play-state: paused;
+  }
+
+/*  
+.logo-item {
+  flex-shrink: 0;
+  width: 140px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 0;  /* ← Remover padding 
+  transition: var(--transition-smooth);
+  cursor: pointer;
+  overflow: hidden;  /* ← Adicionar 
+}
+
+.logo-item img {
+  width: 100%;     /* ← Preencher toda largura 
+  height: 100%;    /* ← Preencher toda altura 
+  object-fit: cover;  /* ← ou 'contain' se preferir manter proporção 
+  filter: grayscale(100%) opacity(0.7);
+  transition: var(--transition-smooth);
+
+*/
+
+  .logo-item {
+    flex-shrink: 0;
+    width: 140px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: var(--transition-smooth);
+    cursor: pointer;
+  }
+
+  .logo-item:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.2);
+  }
+
+  .logo-item img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    filter: grayscale(100%) opacity(0.7);
+    transition: var(--transition-smooth);
+  }
+
+  .logo-item:hover img {
+    filter: grayscale(0%) opacity(1);
+  }
+
+  .clients-count {
+    text-align: center;
+    color: var(--text-secondary);
+    font-size: 1rem;
+    margin-top: 2rem;
+  }
+
+  .clients-count strong {
+    color: var(--accent-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
+
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-140px * 17 - 4rem * 17));
+    }
+  }
+
+  @media (max-width: 768px) {
+    .carousel-track {
+      gap: 2rem;
+    }
+    
+    .logo-item {
+      width: 100px;
+      height: 60px;
+      padding: 1rem;
+    }
+
+    @keyframes scroll {
+      0% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(calc(-100px * 17 - 2rem * 17));
+      }
+    }
+  }
+</style>

@@ -1,11 +1,29 @@
+---
+const { email = "bruno@example.com" } = Astro.props;
+---
+
 <section id="contact" class="contact reveal">
-  <h2 class="section-title">Contact</h2>
-
-  <p class="contact-text">
-    Want to talk about projects, systems, or collaboration?
-  </p>
-
-  <a class="contact-link" href="mailto:bruno@email.com">
-    bruno@email.com
-  </a>
+  <div class="container">
+    <div class="contact-content">
+      <h2 class="contact-title">Vamos Trabalhar Juntos?</h2>
+      
+      <p class="contact-text">
+        Estou sempre aberto a discutir novos projetos, ideias criativas 
+        ou oportunidades para fazer parte da sua visão.
+      </p>
+      
+      <a href={`mailto:${email}`} class="contact-email">
+        {email}
+      </a>
+      
+      <div class="hero-cta" style="justify-content: center; margin-top: 2rem;">
+        <a href={`mailto:${email}`} class="btn btn-primary">
+          Enviar Email
+        </a>
+        <a href="https://linkedin.com" target="_blank" class="btn btn-secondary">
+          LinkedIn
+        </a>
+      </div>
+    </div>
+  </div>
 </section>
